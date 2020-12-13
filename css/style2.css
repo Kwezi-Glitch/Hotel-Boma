@@ -1,0 +1,73 @@
+/* about styling */
+.navigation a{
+    color: var(--bg-secondary);
+    background: var(--cl-primary) ;
+}
+.navigation a:hover{
+    font-style: normal;
+    color: var(--bg-primary);
+    background: white;
+}
+.history{
+    background: var(--bg-secondary);
+}
+section .two-cols{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(600px,1fr));
+    grid-template-areas: 'col2 col1';
+    grid-auto-rows: 400px;
+    margin: 0px 0px;
+    border-top: ridge 2pt var(--bg-primary);
+    gap: 0px;
+}
+.two-cols .col-2{
+    grid-area: col2;
+    font-size: 20px;
+    text-align:center;
+    align-content:center;
+    background: var(--bg-secondary);
+    padding: 10px 5px; 
+}
+.two-cols .col-1{
+    grid-area: col1;
+    background: url('/images/person-2.jpg') no-repeat center center/cover;
+    padding: 10px 5px;
+    justify-self: end;
+    width: 80%;
+}
+.two-cols .col-1 p{
+    color:white;
+    margin: 0 30px;
+}
+.services{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.services h2{
+    justify-self: center;
+    text-align: center;
+}
+
+.h{
+
+    flex-direction: row;
+    justify-self: center;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+@media screen and (max-width:800px){
+    section .two-cols{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'col1''col2';
+        /* background: red; */
+    }
+    .two-cols .col-1{
+        width: 100%;
+    }
+}
